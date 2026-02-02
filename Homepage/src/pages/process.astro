@@ -1,0 +1,663 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Process | SuigenerisBD">
+  <div class="wrapper">
+    <div class="paper-surface">
+      <!-- Margin Rail -->
+      <aside class="margin-rail">
+        <div class="vertical-text">
+          PROCESS — 2024
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Background Pattern -->
+        <svg class="bg-pattern" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path fill="var(--ink-primary)" d="M45.7,-76.3C58.9,-69.3,69.1,-58.3,77.3,-46.3C85.5,-34.3,91.7,-21.3,90.4,-8.9C89.1,3.5,80.3,15.3,71.7,26.4C63.1,37.5,54.7,47.9,44.6,56.3C34.5,64.7,22.7,71.1,10.2,72.6C-2.3,74.1,-15.5,70.7,-27.6,65.3C-39.7,59.9,-50.7,52.5,-60.1,43.2C-69.5,33.9,-77.3,22.7,-79.8,10.4C-82.3,-1.9,-79.5,-15.3,-72.6,-26.8C-65.7,-38.3,-54.7,-47.9,-43.1,-55.5C-31.5,-63.1,-19.3,-68.7,-6.6,-67.7C6.1,-66.7,18.3,-59.1,32.5,-83.3"></path>
+        </svg>
+
+        <!-- Header -->
+        <Header currentPath="/process" />
+
+        <!-- Page Header -->
+        <section class="page-header animate-up delay-2">
+          <span class="hero-overline">How We Work</span>
+          <h1>Precision in<br />Every Phase.</h1>
+          <p class="lead">Our process is a refined workflow that balances creative exploration with technical rigor. From initial concept to final deployment, we maintain clarity and collaboration.</p>
+        </section>
+
+        <!-- Process Timeline -->
+        <section class="process-timeline animate-up delay-3">
+          
+          <!-- Phase 1: Discovery -->
+          <article class="process-phase">
+            <div class="phase-marker">
+              <div class="phase-dot"></div>
+              <div class="phase-line"></div>
+            </div>
+            <div class="phase-content">
+              <div class="phase-header">
+                <span class="phase-number">Phase 01</span>
+                <h2>Discovery & Research</h2>
+              </div>
+              <p class="phase-description">We begin by understanding your vision, users, and market landscape. This phase lays the foundation for strategic decisions.</p>
+              
+              <div class="phase-activities">
+                <div class="activity">
+                  <h4>Stakeholder Interviews</h4>
+                  <p>Deep conversations to understand goals, constraints, and success metrics.</p>
+                </div>
+                <div class="activity">
+                  <h4>User Research</h4>
+                  <p>Analyzing target audiences, behaviors, and pain points through data and empathy.</p>
+                </div>
+                <div class="activity">
+                  <h4>Competitive Analysis</h4>
+                  <p>Mapping the landscape to identify opportunities for differentiation.</p>
+                </div>
+                <div class="activity">
+                  <h4>Technical Feasibility</h4>
+                  <p>Evaluating technological requirements and potential challenges.</p>
+                </div>
+              </div>
+
+              <div class="phase-deliverable">
+                <strong>Deliverable:</strong> Project Brief, User Personas, Technical Roadmap
+              </div>
+            </div>
+          </article>
+
+          <!-- Phase 2: Strategy -->
+          <article class="process-phase">
+            <div class="phase-marker">
+              <div class="phase-dot"></div>
+              <div class="phase-line"></div>
+            </div>
+            <div class="phase-content">
+              <div class="phase-header">
+                <span class="phase-number">Phase 02</span>
+                <h2>Strategy & Planning</h2>
+              </div>
+              <p class="phase-description">Translating insights into actionable plans. We define information architecture, user flows, and technical specifications.</p>
+              
+              <div class="phase-activities">
+                <div class="activity">
+                  <h4>Information Architecture</h4>
+                  <p>Structuring content and features for optimal user navigation and comprehension.</p>
+                </div>
+                <div class="activity">
+                  <h4>User Journey Mapping</h4>
+                  <p>Visualizing end-to-end experiences to identify opportunities and friction points.</p>
+                </div>
+                <div class="activity">
+                  <h4>System Design</h4>
+                  <p>Architecting scalable backend systems, APIs, and data models.</p>
+                </div>
+                <div class="activity">
+                  <h4>Technology Stack Selection</h4>
+                  <p>Choosing the right tools and frameworks for your specific needs.</p>
+                </div>
+              </div>
+
+              <div class="phase-deliverable">
+                <strong>Deliverable:</strong> Sitemap, Wireframes, System Architecture Diagram
+              </div>
+            </div>
+          </article>
+
+          <!-- Phase 3: Design -->
+          <article class="process-phase">
+            <div class="phase-marker">
+              <div class="phase-dot"></div>
+              <div class="phase-line"></div>
+            </div>
+            <div class="phase-content">
+              <div class="phase-header">
+                <span class="phase-number">Phase 03</span>
+                <h2>Design & Prototyping</h2>
+              </div>
+              <p class="phase-description">Crafting intuitive interfaces that merge aesthetics with functionality. We iterate based on feedback and usability testing.</p>
+              
+              <div class="phase-activities">
+                <div class="activity">
+                  <h4>Visual Design System</h4>
+                  <p>Creating cohesive design languages with typography, colors, and components.</p>
+                </div>
+                <div class="activity">
+                  <h4>High-Fidelity Mockups</h4>
+                  <p>Designing pixel-perfect interfaces for all key screens and interactions.</p>
+                </div>
+                <div class="activity">
+                  <h4>Interactive Prototypes</h4>
+                  <p>Building clickable prototypes to validate flows before development.</p>
+                </div>
+                <div class="activity">
+                  <h4>Usability Testing</h4>
+                  <p>Testing designs with real users to refine and optimize experiences.</p>
+                </div>
+              </div>
+
+              <div class="phase-deliverable">
+                <strong>Deliverable:</strong> Design System, UI Mockups, Interactive Prototype
+              </div>
+            </div>
+          </article>
+
+          <!-- Phase 4: Development -->
+          <article class="process-phase">
+            <div class="phase-marker">
+              <div class="phase-dot"></div>
+              <div class="phase-line"></div>
+            </div>
+            <div class="phase-content">
+              <div class="phase-header">
+                <span class="phase-number">Phase 04</span>
+                <h2>Development & Testing</h2>
+              </div>
+              <p class="phase-description">Building robust, scalable code with continuous integration. Quality assurance is embedded throughout development.</p>
+              
+              <div class="phase-activities">
+                <div class="activity">
+                  <h4>Agile Development</h4>
+                  <p>Iterative sprints with regular demos and feedback cycles.</p>
+                </div>
+                <div class="activity">
+                  <h4>Frontend Implementation</h4>
+                  <p>Translating designs into responsive, accessible, performant interfaces.</p>
+                </div>
+                <div class="activity">
+                  <h4>Backend Development</h4>
+                  <p>Building secure APIs, databases, and server-side logic.</p>
+                </div>
+                <div class="activity">
+                  <h4>Quality Assurance</h4>
+                  <p>Comprehensive testing across devices, browsers, and edge cases.</p>
+                </div>
+              </div>
+
+              <div class="phase-deliverable">
+                <strong>Deliverable:</strong> Functional Application, Test Reports, Documentation
+              </div>
+            </div>
+          </article>
+
+          <!-- Phase 5: Launch -->
+          <article class="process-phase">
+            <div class="phase-marker">
+              <div class="phase-dot"></div>
+              <div class="phase-line last"></div>
+            </div>
+            <div class="phase-content">
+              <div class="phase-header">
+                <span class="phase-number">Phase 05</span>
+                <h2>Launch & Optimization</h2>
+              </div>
+              <p class="phase-description">Deploying to production with monitoring in place. Post-launch, we analyze performance and iterate based on real-world usage.</p>
+              
+              <div class="phase-activities">
+                <div class="activity">
+                  <h4>Deployment</h4>
+                  <p>Seamless launch with rollback strategies and zero-downtime deployment.</p>
+                </div>
+                <div class="activity">
+                  <h4>Performance Monitoring</h4>
+                  <p>Tracking metrics, uptime, and user behavior to ensure smooth operation.</p>
+                </div>
+                <div class="activity">
+                  <h4>User Feedback Collection</h4>
+                  <p>Gathering insights from real users to inform future improvements.</p>
+                </div>
+                <div class="activity">
+                  <h4>Continuous Optimization</h4>
+                  <p>Refining features, fixing issues, and enhancing performance over time.</p>
+                </div>
+              </div>
+
+              <div class="phase-deliverable">
+                <strong>Deliverable:</strong> Live Application, Analytics Dashboard, Support Plan
+              </div>
+            </div>
+          </article>
+
+        </section>
+
+        <!-- Principles Section -->
+        <section class="principles-section animate-up delay-3">
+          <h2>Our Core Principles</h2>
+          <div class="principles-grid">
+            <div class="principle-card">
+              <h3>Transparency</h3>
+              <p>Clear communication at every stage. You're never left wondering about progress or decisions.</p>
+            </div>
+            <div class="principle-card">
+              <h3>Flexibility</h3>
+              <p>Adaptable to changing requirements while maintaining project momentum and quality.</p>
+            </div>
+            <div class="principle-card">
+              <h3>Collaboration</h3>
+              <p>Your team becomes our team. We work together, not in isolation.</p>
+            </div>
+            <div class="principle-card">
+              <h3>Quality</h3>
+              <p>No shortcuts. Every line of code and pixel is crafted with care and precision.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section animate-up delay-3">
+          <div class="cta-content">
+            <h2>Let's map out your journey</h2>
+            <p>Schedule a discovery call to discuss how our process can bring your vision to life.</p>
+            <a href="#" class="btn-ink">Start Discovery_</a>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <Footer />
+      </main>
+    </div>
+  </div>
+</Layout>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Rozha+One&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+  :root {
+    --bg-void: #1a1a1a;
+    --bg-paper: #0a0a0a;
+    --ink-primary: #F0F0F0;
+    --ink-secondary: #A0A0A0;
+    --accent-margin: #E69138;
+    --font-display: 'Rozha One', serif; 
+    --font-tech: 'Space Mono', monospace; 
+    
+    --spacing-unit: 8px;
+    --container-width: 1200px;
+    --transition-speed: 0.4s;
+  }
+
+  [data-theme="light"] {
+    --bg-void: #CD202C;
+    --bg-paper: #FDFBF7;
+    --ink-primary: #0F0F0F;
+    --ink-secondary: #4A4A4A;
+    --accent-margin: #CD202C; 
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    background-color: var(--bg-void);
+    color: var(--ink-primary);
+    font-family: var(--font-tech);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color var(--transition-speed) ease;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 400; 
+    line-height: 1.1;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 4vh 2vw;
+    min-height: 100vh;
+  }
+
+  .paper-surface {
+    background-color: var(--bg-paper);
+    width: 100%;
+    max-width: var(--container-width);
+    min-height: 92vh;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    display: grid;
+    grid-template-columns: 80px 1fr; 
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  }
+
+  .margin-rail {
+    height: 100%;
+    border-right: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+  }
+
+  .vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-top: auto;
+    padding-bottom: 80px;
+    color: var(--accent-margin);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .margin-rail::after {
+    content: '';
+    position: absolute;
+    right: 12px; 
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    border-left: 1px solid var(--accent-margin);
+    border-right: 1px solid var(--accent-margin);
+    opacity: 0.8;
+  }
+
+  .main-content {
+    padding: 60px 80px;
+    position: relative;
+  }
+
+  .page-header {
+    margin-bottom: 100px;
+  }
+
+  .hero-overline {
+    color: var(--bg-void);
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  [data-theme="dark"] .hero-overline { color: var(--accent-margin); }
+
+  .page-header h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    margin-bottom: 32px;
+    color: var(--ink-primary);
+  }
+
+  .page-header .lead {
+    max-width: 600px;
+    color: var(--ink-secondary);
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  .btn-ink {
+    display: inline-flex;
+    align-items: center;
+    padding: 16px 32px;
+    background: var(--ink-primary);
+    color: var(--bg-paper);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 1px solid var(--ink-primary);
+    transition: all 0.3s ease;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 95% 100%, 0 100%); 
+  }
+
+  .btn-ink:hover {
+    background: transparent;
+    color: var(--ink-primary);
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0 var(--bg-void);
+  }
+
+  .bg-pattern {
+    position: absolute;
+    top: 20%;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  [data-theme="dark"] .bg-pattern { opacity: 0.1; }
+
+  /* Process Timeline Styles */
+  .process-timeline {
+    margin-bottom: 100px;
+  }
+
+  .process-phase {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .phase-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phase-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent-margin);
+    border: 3px solid var(--bg-paper);
+    box-shadow: 0 0 0 2px var(--accent-margin);
+    position: relative;
+    z-index: 2;
+  }
+
+  .phase-line {
+    width: 2px;
+    flex: 1;
+    background: var(--accent-margin);
+    opacity: 0.3;
+    margin-top: 8px;
+  }
+
+  .phase-line.last {
+    opacity: 0;
+  }
+
+  .phase-content {
+    padding-bottom: 40px;
+  }
+
+  .phase-header {
+    margin-bottom: 20px;
+  }
+
+  .phase-number {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-margin);
+    margin-bottom: 8px;
+  }
+
+  .phase-content h2 {
+    font-size: 2.5rem;
+    color: var(--ink-primary);
+    margin-bottom: 16px;
+  }
+
+  .phase-description {
+    font-size: 1.1rem;
+    color: var(--ink-secondary);
+    margin-bottom: 32px;
+    line-height: 1.8;
+  }
+
+  .phase-activities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  .activity {
+    padding: 20px;
+    background: rgba(0,0,0,0.02);
+    border-left: 2px solid var(--accent-margin);
+  }
+
+  [data-theme="dark"] .activity {
+    background: rgba(255,255,255,0.02);
+  }
+
+  .activity h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: var(--ink-primary);
+  }
+
+  .activity p {
+    font-size: 0.9rem;
+    color: var(--ink-secondary);
+    line-height: 1.6;
+  }
+
+  .phase-deliverable {
+    padding: 16px 20px;
+    background: rgba(230, 145, 56, 0.1);
+    border-left: 3px solid var(--accent-margin);
+    font-size: 0.9rem;
+    color: var(--ink-primary);
+  }
+
+  .phase-deliverable strong {
+    color: var(--accent-margin);
+  }
+
+  /* Principles Section */
+  .principles-section {
+    margin-bottom: 100px;
+  }
+
+  .principles-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 48px;
+    text-align: center;
+    color: var(--ink-primary);
+  }
+
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+  }
+
+  .principle-card {
+    padding: 32px;
+    border: 1px solid rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .principle-card:hover {
+    border-color: var(--accent-margin);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  }
+
+  .principle-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: var(--bg-void);
+  }
+
+  [data-theme="dark"] .principle-card h3 {
+    color: var(--accent-margin);
+  }
+
+  .principle-card p {
+    font-size: 0.95rem;
+    color: var(--ink-secondary);
+    line-height: 1.7;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background: rgba(0,0,0,0.02);
+    padding: 80px 60px;
+    text-align: center;
+    margin-bottom: 80px;
+    border-top: 2px solid var(--accent-margin);
+  }
+
+  [data-theme="dark"] .cta-section {
+    background: rgba(255,255,255,0.02);
+  }
+
+  .cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--ink-primary);
+  }
+
+  .cta-content p {
+    font-size: 1.1rem;
+    color: var(--ink-secondary);
+    margin-bottom: 32px;
+  }
+
+  @keyframes reveal {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-up {
+    animation: reveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    opacity: 0;
+  }
+  
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+
+  @media (max-width: 900px) {
+    .paper-surface { grid-template-columns: 40px 1fr; }
+    .margin-rail::after { right: 6px; width: 3px; border-width: 1px; }
+    .main-content { padding: 40px; }
+    .process-phase {
+      grid-template-columns: 40px 1fr;
+      gap: 20px;
+    }
+    .phase-content h2 {
+      font-size: 2rem;
+    }
+    .phase-activities {
+      grid-template-columns: 1fr;
+    }
+    .principles-grid {
+      grid-template-columns: 1fr;
+    }
+    .cta-section {
+      padding: 60px 40px;
+    }
+    .bg-pattern { width: 300px; right: -50px; }
+  }
+</style>
+
+<script is:inline>
+  // Intersection Observer for scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.animate-up').forEach(el => observer.observe(el));
+</script>

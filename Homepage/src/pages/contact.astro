@@ -1,0 +1,664 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contact | SuigenerisBD">
+  <div class="wrapper">
+    <div class="paper-surface">
+      <!-- Margin Rail -->
+      <aside class="margin-rail">
+        <div class="vertical-text">
+          CONTACT — 2024
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Background Pattern -->
+        <svg class="bg-pattern" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path fill="var(--ink-primary)" d="M45.7,-76.3C58.9,-69.3,69.1,-58.3,77.3,-46.3C85.5,-34.3,91.7,-21.3,90.4,-8.9C89.1,3.5,80.3,15.3,71.7,26.4C63.1,37.5,54.7,47.9,44.6,56.3C34.5,64.7,22.7,71.1,10.2,72.6C-2.3,74.1,-15.5,70.7,-27.6,65.3C-39.7,59.9,-50.7,52.5,-60.1,43.2C-69.5,33.9,-77.3,22.7,-79.8,10.4C-82.3,-1.9,-79.5,-15.3,-72.6,-26.8C-65.7,-38.3,-54.7,-47.9,-43.1,-55.5C-31.5,-63.1,-19.3,-68.7,-6.6,-67.7C6.1,-66.7,18.3,-59.1,32.5,-83.3"></path>
+        </svg>
+
+        <!-- Header -->
+        <Header currentPath="/contact" />
+
+        <!-- Page Header -->
+        <section class="page-header animate-up delay-2">
+          <span class="hero-overline">Let's Connect</span>
+          <h1>Start Your<br />Project Today.</h1>
+          <p class="lead">Ready to transform your vision into reality? Reach out and let's discuss how we can create something uniquely engineered for you.</p>
+        </section>
+
+        <!-- Contact Content Grid -->
+        <section class="contact-grid animate-up delay-3">
+          
+          <!-- Contact Form -->
+          <div class="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <form class="contact-form" id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name *</label>
+                  <input type="text" id="name" name="name" required placeholder="Your name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" required placeholder="you@example.com">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+880 1XXX-XXXXXX">
+                </div>
+                <div class="form-group">
+                  <label for="company">Company / Organization</label>
+                  <input type="text" id="company" name="company" placeholder="Your company">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="service">Service Interested In *</label>
+                <select id="service" name="service" required>
+                  <option value="">Select a service</option>
+                  <option value="system-architecture">System Architecture</option>
+                  <option value="native-interface">Native Interface</option>
+                  <option value="digital-sovereignty">Digital Sovereignty</option>
+                  <option value="custom-development">Custom Development</option>
+                  <option value="consultation">Consultation</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="budget">Estimated Budget</label>
+                <select id="budget" name="budget">
+                  <option value="">Select budget range</option>
+                  <option value="under-5k">Under $5,000</option>
+                  <option value="5k-10k">$5,000 - $10,000</option>
+                  <option value="10k-25k">$10,000 - $25,000</option>
+                  <option value="25k-50k">$25,000 - $50,000</option>
+                  <option value="50k-plus">$50,000+</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="timeline">Project Timeline</label>
+                <select id="timeline" name="timeline">
+                  <option value="">Select timeline</option>
+                  <option value="urgent">ASAP (1-2 weeks)</option>
+                  <option value="1-month">1 Month</option>
+                  <option value="2-3-months">2-3 Months</option>
+                  <option value="3-6-months">3-6 Months</option>
+                  <option value="6-plus-months">6+ Months</option>
+                  <option value="flexible">Flexible</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Project Details *</label>
+                <textarea id="message" name="message" rows="6" required placeholder="Tell us about your project, goals, and any specific requirements..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-ink">Send Message_</button>
+            </form>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="contact-info-section">
+            <h2>Get In Touch</h2>
+            
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div class="contact-text">
+                  <h3>Email</h3>
+                  <a href="mailto:hello@suigenerisbd.com">hello@suigenerisbd.com</a>
+                  <a href="mailto:projects@suigenerisbd.com">projects@suigenerisbd.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <div class="contact-text">
+                  <h3>Phone</h3>
+                  <a href="tel:+8801XXXXXXXXX">+880 1XXX-XXXXXX</a>
+                  <p>Mon-Fri, 9:00 AM - 6:00 PM (GMT+6)</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-text">
+                  <h3>Office</h3>
+                  <p>Dhaka, Bangladesh</p>
+                  <p>Banani / Gulshan Area</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">🌐</div>
+                <div class="contact-text">
+                  <h3>Follow Us</h3>
+                  <div class="social-links">
+                    <a href="#" target="_blank">LinkedIn</a>
+                    <a href="#" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">Twitter</a>
+                    <a href="#" target="_blank">Behance</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="business-hours">
+              <h3>Business Hours</h3>
+              <div class="hours-list">
+                <div class="hours-item">
+                  <span>Monday - Friday</span>
+                  <span>9:00 AM - 6:00 PM</span>
+                </div>
+                <div class="hours-item">
+                  <span>Saturday</span>
+                  <span>10:00 AM - 4:00 PM</span>
+                </div>
+                <div class="hours-item">
+                  <span>Sunday</span>
+                  <span>Closed</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Response Time -->
+            <div class="response-info">
+              <h4>⚡ Quick Response</h4>
+              <p>We typically respond within 24 hours on business days. For urgent inquiries, please call us directly.</p>
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section animate-up delay-3">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-grid">
+            <div class="faq-item">
+              <h3>What's the typical project timeline?</h3>
+              <p>Most projects range from 2-6 months depending on scope and complexity. We'll provide a detailed timeline during our initial consultation.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Do you work with international clients?</h3>
+              <p>Yes! We've successfully delivered projects for clients across Bangladesh, India, and the Middle East.</p>
+            </div>
+            <div class="faq-item">
+              <h3>What's your payment structure?</h3>
+              <p>We typically work with milestone-based payments: 30% upfront, 40% at midpoint, and 30% upon completion.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Do you provide ongoing support?</h3>
+              <p>Absolutely. We offer maintenance packages and ongoing support agreements tailored to your needs.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <Footer />
+      </main>
+    </div>
+  </div>
+</Layout>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=Rozha+One&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+  :root {
+    --bg-void: #1a1a1a;
+    --bg-paper: #0a0a0a;
+    --ink-primary: #F0F0F0;
+    --ink-secondary: #A0A0A0;
+    --accent-margin: #E69138;
+    --font-display: 'Rozha One', serif; 
+    --font-tech: 'Space Mono', monospace; 
+    
+    --spacing-unit: 8px;
+    --container-width: 1200px;
+    --transition-speed: 0.4s;
+  }
+
+  [data-theme="light"] {
+    --bg-void: #CD202C;
+    --bg-paper: #FDFBF7;
+    --ink-primary: #0F0F0F;
+    --ink-secondary: #4A4A4A;
+    --accent-margin: #CD202C; 
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    background-color: var(--bg-void);
+    color: var(--ink-primary);
+    font-family: var(--font-tech);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color var(--transition-speed) ease;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 400; 
+    line-height: 1.1;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 4vh 2vw;
+    min-height: 100vh;
+  }
+
+  .paper-surface {
+    background-color: var(--bg-paper);
+    width: 100%;
+    max-width: var(--container-width);
+    min-height: 92vh;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    display: grid;
+    grid-template-columns: 80px 1fr; 
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  }
+
+  .margin-rail {
+    height: 100%;
+    border-right: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+  }
+
+  .vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-top: auto;
+    padding-bottom: 80px;
+    color: var(--accent-margin);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .margin-rail::after {
+    content: '';
+    position: absolute;
+    right: 12px; 
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    border-left: 1px solid var(--accent-margin);
+    border-right: 1px solid var(--accent-margin);
+    opacity: 0.8;
+  }
+
+  .main-content {
+    padding: 60px 80px;
+    position: relative;
+  }
+
+  .page-header {
+    margin-bottom: 80px;
+  }
+
+  .hero-overline {
+    color: var(--bg-void);
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  [data-theme="dark"] .hero-overline { color: var(--accent-margin); }
+
+  .page-header h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    margin-bottom: 32px;
+    color: var(--ink-primary);
+  }
+
+  .page-header .lead {
+    max-width: 600px;
+    color: var(--ink-secondary);
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  .btn-ink {
+    display: inline-flex;
+    align-items: center;
+    padding: 16px 32px;
+    background: var(--ink-primary);
+    color: var(--bg-paper);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 1px solid var(--ink-primary);
+    transition: all 0.3s ease;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 95% 100%, 0 100%);
+    cursor: pointer;
+  }
+
+  .btn-ink:hover {
+    background: transparent;
+    color: var(--ink-primary);
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0 var(--bg-void);
+  }
+
+  .bg-pattern {
+    position: absolute;
+    top: 20%;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  [data-theme="dark"] .bg-pattern { opacity: 0.1; }
+
+  /* Contact Grid */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    margin-bottom: 100px;
+  }
+
+  /* Contact Form */
+  .contact-form-section h2,
+  .contact-info-section h2 {
+    font-size: 2rem;
+    margin-bottom: 32px;
+    color: var(--ink-primary);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--ink-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 16px;
+    border: 1px solid rgba(0,0,0,0.2);
+    background: var(--bg-paper);
+    color: var(--ink-primary);
+    font-family: var(--font-tech);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-margin);
+    box-shadow: 0 0 0 2px rgba(230, 145, 56, 0.1);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  /* Contact Info */
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  .contact-item {
+    display: flex;
+    gap: 16px;
+  }
+
+  .contact-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  .contact-text h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--ink-primary);
+  }
+
+  .contact-text p {
+    font-size: 0.9rem;
+    color: var(--ink-secondary);
+    margin-bottom: 4px;
+  }
+
+  .contact-text a {
+    display: block;
+    color: var(--accent-margin);
+    text-decoration: none;
+    margin-bottom: 4px;
+    transition: color 0.3s ease;
+  }
+
+  .contact-text a:hover {
+    color: var(--bg-void);
+  }
+
+  .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .social-links a {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid rgba(0,0,0,0.2);
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+  }
+
+  .social-links a:hover {
+    border-color: var(--accent-margin);
+    background: var(--accent-margin);
+    color: var(--bg-paper);
+  }
+
+  /* Business Hours */
+  .business-hours {
+    padding: 24px;
+    background: rgba(0,0,0,0.02);
+    border-left: 3px solid var(--accent-margin);
+    margin-bottom: 32px;
+  }
+
+  [data-theme="dark"] .business-hours {
+    background: rgba(255,255,255,0.02);
+  }
+
+  .business-hours h3 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    color: var(--ink-primary);
+  }
+
+  .hours-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hours-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--ink-secondary);
+  }
+
+  .hours-item span:first-child {
+    font-weight: 700;
+  }
+
+  /* Response Info */
+  .response-info {
+    padding: 20px;
+    background: rgba(230, 145, 56, 0.1);
+    border: 1px solid var(--accent-margin);
+  }
+
+  .response-info h4 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: var(--ink-primary);
+  }
+
+  .response-info p {
+    font-size: 0.9rem;
+    color: var(--ink-secondary);
+    line-height: 1.6;
+  }
+
+  /* FAQ Section */
+  .faq-section {
+    margin-bottom: 100px;
+  }
+
+  .faq-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 48px;
+    color: var(--ink-primary);
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+  }
+
+  .faq-item {
+    padding: 24px;
+    border: 1px solid rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    border-color: var(--accent-margin);
+    transform: translateY(-2px);
+  }
+
+  .faq-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: var(--ink-primary);
+  }
+
+  .faq-item p {
+    font-size: 0.9rem;
+    color: var(--ink-secondary);
+    line-height: 1.7;
+  }
+
+  @keyframes reveal {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-up {
+    animation: reveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    opacity: 0;
+  }
+  
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+
+  @media (max-width: 900px) {
+    .paper-surface { grid-template-columns: 40px 1fr; }
+    .margin-rail::after { right: 6px; width: 3px; border-width: 1px; }
+    .main-content { padding: 40px; }
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+    .bg-pattern { width: 300px; right: -50px; }
+  }
+</style>
+
+<script is:inline>
+  // Intersection Observer for scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.animate-up').forEach(el => observer.observe(el));
+
+  // Form submission handler
+  const contactForm = document.getElementById('contactForm');
+  contactForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData);
+    
+    // Here you would typically send this to your backend
+    console.log('Form submitted:', data);
+    
+    // Show success message (you can customize this)
+    alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+    
+    // Reset form
+    contactForm.reset();
+  });
+</script>

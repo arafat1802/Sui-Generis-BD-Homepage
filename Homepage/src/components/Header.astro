@@ -1,0 +1,265 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
+---
+
+<header class="animate-up delay-1">
+  <a href="/" class="logo">sui<span>generis</span>bd</a>
+  <nav>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="/" class={currentPath === '/' ? 'active' : ''}>Home</a></li>
+      <li><a href="/solutions" class={currentPath === '/solutions' ? 'active' : ''}>Solutions</a></li>
+      <li><a href="/process" class={currentPath === '/process' ? 'active' : ''}>Process</a></li>
+      <li><a href="/contact" class={currentPath === '/contact' ? 'active' : ''}>Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="theme-toggle" id="themeBtn" title="Toggle Light/Dark Mode"></div>
+      <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  .logo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    color: var(--ink-primary);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    z-index: 1001;
+  }
+
+  .logo:hover {
+    opacity: 0.7;
+  }
+
+  .logo span { 
+    color: var(--accent-margin); 
+  } 
+  
+  [data-theme="light"] .logo span { 
+    color: var(--bg-void); 
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--ink-secondary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  nav a.active {
+    color: var(--ink-primary);
+    font-weight: 700;
+  }
+
+  nav a::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: var(--bg-void);
+    transition: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  [data-theme="dark"] nav a::before {
+    background: var(--accent-margin);
+  }
+
+  nav a:hover::before { 
+    width: 100%; 
+  }
+
+  nav a.active::before {
+    width: 100%;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .theme-toggle {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--ink-primary);
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .theme-toggle:hover {
+    transform: scale(1.1);
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+  }
+
+  .mobile-menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background: var(--ink-primary);
+    transition: all 0.3s ease;
+    display: block;
+  }
+
+  .mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  @media (max-width: 900px) {
+    .mobile-menu-toggle {
+      display: flex;
+    }
+
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 280px;
+      height: 100vh;
+      background: var(--bg-paper);
+      flex-direction: column;
+      gap: 0;
+      padding: 100px 40px 40px;
+      box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+      transition: right 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      z-index: 1000;
+    }
+
+    .nav-menu.active {
+      right: 0;
+    }
+
+    .nav-menu li {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    .nav-menu a {
+      display: block;
+      font-size: 1.2rem;
+      padding: 12px 0;
+    }
+
+    .nav-menu a::before {
+      bottom: 8px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    header {
+      margin-bottom: 40px;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+    }
+
+    .nav-menu {
+      width: 100%;
+      right: -100%;
+      padding: 80px 24px 24px;
+    }
+  }
+</style>
+
+<script is:inline>
+  // Mobile menu toggle
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const navMenu = document.getElementById('navMenu');
+
+  mobileMenuBtn?.addEventListener('click', () => {
+    mobileMenuBtn.classList.toggle('active');
+    navMenu?.classList.toggle('active');
+  });
+
+  // Close menu when clicking on a link
+  navMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenuBtn?.classList.remove('active');
+      navMenu?.classList.remove('active');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    if (!target.closest('nav') && navMenu?.classList.contains('active')) {
+      mobileMenuBtn?.classList.remove('active');
+      navMenu?.classList.remove('active');
+    }
+  });
+
+  // Theme toggle
+  const themeBtn = document.getElementById('themeBtn');
+  const html = document.documentElement;
+
+  const savedTheme = localStorage.getItem('theme');
+  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+    html.setAttribute('data-theme', 'dark');
+  }
+
+  themeBtn?.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+</script>
