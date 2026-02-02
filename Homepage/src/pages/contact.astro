@@ -630,35 +630,3 @@ import Footer from '../components/Footer.astro';
   }
 </style>
 
-<script is:inline>
-  // Intersection Observer for scroll animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.2 });
-
-  document.querySelectorAll('.animate-up').forEach(el => observer.observe(el));
-
-  // Form submission handler
-  const contactForm = document.getElementById('contactForm');
-  contactForm?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
-    
-    // Here you would typically send this to your backend
-    console.log('Form submitted:', data);
-    
-    // Show success message (you can customize this)
-    alert('Thank you for your message! We\'ll get back to you within 24 hours.');
-    
-    // Reset form
-    contactForm.reset();
-  });
-</script>

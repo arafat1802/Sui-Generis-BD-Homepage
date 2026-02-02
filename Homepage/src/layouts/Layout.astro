@@ -4,6 +4,7 @@ export interface Props {
 }
 
 const { title = 'SuigenerisBD | Uniquely Engineered' } = Astro.props;
+import appScript from '../scripts/app-init.js?url';
 ---
 
 <!doctype html>
@@ -16,5 +17,6 @@ const { title = 'SuigenerisBD | Uniquely Engineered' } = Astro.props;
 	</head>
 	<body>
 		<slot />
+		<script type="module" src={appScript}></script>
 	</body>
 </html>

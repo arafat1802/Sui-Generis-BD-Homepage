@@ -344,29 +344,3 @@ import Footer from '../components/Footer.astro';
   }
 </style>
 
-<script is:inline>
-  // Intersection Observer for scroll animations
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        if (entry.target.classList.contains('draw-on-scroll')) {
-          entry.target.classList.add('is-drawn');
-        } else {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      }
-    });
-  }, { threshold: 0.2 });
-
-  document.querySelectorAll('.animate-up, .draw-on-scroll').forEach(el => observer.observe(el));
-
-  // Initialize SVG stroke animation
-  document.querySelectorAll('.stroke').forEach(path => {
-    const length = path.getTotalLength?.();
-    if (length) {
-      path.style.strokeDasharray = length;
-      path.style.strokeDashoffset = length;
-    }
-  });
-</script>
