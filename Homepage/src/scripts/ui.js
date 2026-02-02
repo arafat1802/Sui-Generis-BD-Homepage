@@ -12,11 +12,9 @@ export function initThemeToggle({
   const savedTheme = storage.getItem('theme');
   const systemDark = media?.('(prefers-color-scheme: dark)')?.matches ?? false;
 
-  if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
-    root.setAttribute('data-theme', 'dark');
-  } else {
-    root.setAttribute('data-theme', 'light');
-  }
+  // Set initial theme
+  const initialTheme = savedTheme || (systemDark ? 'dark' : 'light');
+  root.setAttribute('data-theme', initialTheme);
 
   const handleClick = () => {
     const currentTheme = root.getAttribute('data-theme');
