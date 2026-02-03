@@ -47,13 +47,33 @@ export function initMobileMenu({
   }
 
   const toggleMenu = () => {
-    mobileMenuBtn.classList.toggle('active');
-    navMenu.classList.toggle('active');
+    const isActive = navMenu.classList.contains('active');
+    
+    if (isActive) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  };
+
+  const openMenu = () => {
+    mobileMenuBtn.classList.add('active');
+    navMenu.classList.add('active');
+    mobileMenuBtn.setAttribute('aria-expanded', 'true');
+    
+    // Prevent body scroll
+    doc.body.style.overflow = 'hidden';
+    doc.body.style.touchAction = 'none';
   };
 
   const closeMenu = () => {
     mobileMenuBtn.classList.remove('active');
     navMenu.classList.remove('active');
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    
+    // Restore body scroll
+    doc.body.style.overflow = '';
+    doc.body.style.touchAction = '';
   };
 
   const handleOutsideClick = (e) => {
@@ -63,6 +83,14 @@ export function initMobileMenu({
     }
   };
 
+  const handleEscapeKey = (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+      closeMenu();
+      mobileMenuBtn.focus();
+    }
+  };
+
+  mobileMenuBtn.setAttribute('aria-expanded', 'false');
   mobileMenuBtn.addEventListener('click', toggleMenu);
 
   navMenu.querySelectorAll('a').forEach(link => {
@@ -70,6 +98,14 @@ export function initMobileMenu({
   });
 
   doc.addEventListener('click', handleOutsideClick);
+  doc.addEventListener('keydown', handleEscapeKey);
+
+  // Handle orientation change
+  window.addEventListener('orientationchange', () => {
+    if (navMenu.classList.contains('active')) {
+      closeMenu();
+    }
+  });
 
   return {
     mobileMenuBtn,
@@ -80,6 +116,8 @@ export function initMobileMenu({
         link.removeEventListener('click', closeMenu);
       });
       doc.removeEventListener('click', handleOutsideClick);
+      doc.removeEventListener('keydown', handleEscapeKey);
+      closeMenu();
     }
   };
 }
